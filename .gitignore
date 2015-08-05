@@ -55,3 +55,9 @@ docs/_build/
 
 # PyBuilder
 target/
+
+# Blog Builder
+_assets/
+_includes/
+_layouts/
+_site/

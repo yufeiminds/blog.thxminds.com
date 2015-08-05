@@ -1,0 +1,37 @@
+name: YufeiMinds
+author: Yufei Li
+description: "Simple is Powerful."
+baseurl: "http://thxminds.com"
+permalink: "/:dirname/:filename.html"
+timezone: Asia/Shanghai
+
+paginate: 10
+paginate_path: "page/:num"
+
+excludes: ["Makefile", "_config.yml", "README.md", "LICENSE"]
+
+links:
+  - name: About
+    url: /resume
+  - name: Chinese
+    url: /zh/
+  - name: English
+    url: /en/
+  - name: Lab
+    url: http://lab.thxminds.com
+
+social:
+  - name: Email
+    url: "mailto:yufei@thxminds.com"
+  - name: Twitter
+    url: "#"
+  - name: Weibo
+    url: "http://weibo.com/1198838802"
+  - name: GitHub
+    url: "https://github.com/yufeiminds"
+  - name: Feed
+    url: "http://blog.thxminds.com/feed.xml"
+
+disqus: thxminds
+google_analytics: "UA-65024686-1"
+google_webmaster: ""
