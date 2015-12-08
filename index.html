@@ -1,0 +1,73 @@
+{% extends "layout.html" %}
+
+{% block extra_meta %}
+  <meta name="description" content="{{ site.description }}">
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="{{ site.name }}">
+  <meta property="og:url" content="{{ site.baseurl }}/">
+  <meta property="og:description" content="{{ site.description }}">
+  <meta property="og:image" content="/logo.svg">
+  <meta name="twitter:card" content="summary">
+  <meta name="twitter:site" content="@yufeiminds">
+  <meta name="twitter:creator" content="@yufeiminds">
+  <meta name="twitter:domain" content="blog.thxminds.com">
+{% endblock %}
+
+{% block container %}
+<style>
+  .lists {
+    padding-top: 2em;
+  }
+  .entry-content h2 {
+    font-size: 13px;
+    text-transform: uppercase;
+    font-weight: 300;
+    font-family: sans-serif;
+    color: #999;
+  }
+  .lists time {
+    color: #666;
+    font-family: monospace;
+    font-size: 14px;
+  }
+</style>
+<div class="entry-content lists">
+
+{% filter markdown %}
+
+![Mountain](http://7xkb4l.com1.z0.glb.clouddn.com/blog/mountain.jpg "Mountain")
+
+My name is Yufei Li, major in computer science. I like python, and interested in machine learning. I believe in:
+
+> Living and hrad working, Simple is powerful.
+
+{% endfilter %}
+
+  <h2>Latest Updates</h2>
+  <ul class="unstyled">
+    {% for item in site.posts(count=5) %}
+      <li><time>{{ item.date.strftime('%Y-%m-%d') }}</time> — <a href="{{ item.url }}">{{ item.title }}</a></li>
+    {% endfor %}
+  </ul>
+</div>
+
+<div class="entry-content">
+  {% filter markdown %}
+
+## LATEST UPDATES
+
+## Open Source Project
+
+I had pushed most of my open source project to [Github](http://github.com/yufeiminds), under MIT License, and you may also preview it on [Lab](http://lab.thxminds.com).
+
+## THXMINDS.COM
+
+The theme of this blog is design by [Lepture](http://lepture.com), I custom it a little and add the formula support. 
+
+All the content are under the [CC By 4.0]() License, you may found it on [Github]().
+
+Theme power by [Lepture](http://lepture.com) - [yue.css](http://lab.lepture.com/yue.css/)
+
+  {% endfilter %}
+</div>
+{% endblock %}

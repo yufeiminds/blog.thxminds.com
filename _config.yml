@@ -12,13 +12,13 @@ excludes: ["Makefile", "_config.yml", "README.md", "LICENSE"]
 
 links:
   - name: About
-    url: /resume
+    url: /resume.html
   - name: Chinese
     url: /zh/
   - name: English
     url: /en/
   - name: Lab
-    url: http://lab.thxminds.com
+    url: /lib
 
 social:
   - name: Email
