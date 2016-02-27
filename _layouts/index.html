@@ -1,0 +1,34 @@
+{% extends "layout.html" %}
+
+{% block main %}
+<div class="entry-header">
+  <div class="container yue">
+    {% block header %}{% endblock %}
+  </div>
+</div>
+
+<div id="main" class="container yue">
+  <ul class="entry-list" role="main">
+    {% for page in paginator.posts %}
+    <li class="entry-item" itemscope itemtype="http://schema.org/Article">
+    <div class="entry-meta">
+      <time class="updated" itemprop="datePublished">{{ page.date.strftime('%b %d, %Y') }}</time>
+      <em>{{ page.body|wordcount }} words</em>
+    </div>
+    <div class="detail">
+      <h2 itemprop="name"><a itemprop="url" href="{{ page.url }}">{{ page.title }}</a></h2>
+      {% if page.description %}
+      <div itemprop="description"><a href="{{ page.url }}" class="description">{{ page.description }}</a></div>
+      {% endif %}
+    </div>
+    </li>
+    {% endfor %}
+  </ul>
+
+  {% block paginator %}
+    {% if paginator.has_prev or paginator.has_next %}
+      {% include "paginator.html" %}
+    {% endif %}
+  {% endblock %}
+</div>
+{% endblock %}

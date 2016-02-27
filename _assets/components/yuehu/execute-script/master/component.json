@@ -1,0 +1,20 @@
+{
+  "name": "execute-script",
+  "description": "Execute a script node again.",
+  "version": "0.0.1",
+  "keywords": [],
+  "dependencies": {},
+  "development": {
+    "dependencies": {
+      "visionmedia/mocha": "*"
+    }
+  },
+  "license": "MIT",
+  "main": "index.js",
+  "scripts": [
+    "index.js"
+  ],
+  "remotes": [],
+  "repository": "yuehu/execute-script",
+  "resolved": "9fb810853a327b46fe79ff281337aa1dc4160722"
+}

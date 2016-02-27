@@ -1,0 +1,20 @@
+{
+  "name": "turbolinks",
+  "description": "turbolinks in component.",
+  "version": "0.0.1",
+  "keywords": [],
+  "dependencies": {
+    "component/emitter": "*",
+    "component/delegate": "*",
+    "yuehu/dom-parser": "*",
+    "yuehu/execute-script": "*"
+  },
+  "development": {},
+  "license": "MIT",
+  "main": "index.js",
+  "scripts": [
+    "index.js"
+  ],
+  "repository": "yuehu/turbolinks",
+  "resolved": "27fbeb206cce97c5e38978784920aef4ec4ac4a6"
+}

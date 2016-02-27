@@ -1,0 +1,49 @@
+{% extends "layout.html" %}
+
+{% block title %}{{ page.title }} — {{ site.name }}{% endblock %}
+
+{% block extra_meta %}
+  {% include "twitter-card.html" %}
+{% endblock %}
+
+{% macro WebPage(schema='Article') %}
+<article id="main" role="main" class="hentry yue" itemscope itemtype="http://schema.org/{{schema}}">
+  {% include "article-header.html" %}
+
+  <div class="entry-content container" itemprop="articleBody">
+    {{ page.content|markdown(lazyimg=True) }}
+  </div>
+
+  {% if page.review %}
+    {% include "review-footer.html" %}
+  {% else %}
+    <span class="author vcard hide">
+      <span class="fn" itemprop="author">{{ site.author }}</span>
+    </span>
+  {% endif %}
+  </div>
+
+  <div class="entry-extra container">
+    {% if page.tags %}
+    <div class="entry-tags">
+      {% for tag in page.tags %}
+      <span class="tag">{{ tag }}</span>
+      {% endfor %}
+    </div>
+    {% endif %}
+    <div class="social-button" data-url="{{ site.baseurl }}{{ page.url }}" data-text="{{ page.title }}{% if page.description %} — {{ page.description }}{% endif %}" data-twitter="lepture" data-weibo="lepture" data-facebook="lepture" data-count="true"></div>
+  </div>
+
+</article>
+{% endmacro %}
+
+
+{% block main %}
+  {% if page.review %}
+    {{ WebPage("Review") }}
+  {% else %}
+    {{ WebPage("Article") }}
+  {% endif %}
+
+  {% include "disqus.html" %}
+{% endblock %}

@@ -1,0 +1,17 @@
+{
+  "name": "google-analytics",
+  "description": "Google Analytics snippet.",
+  "version": "0.0.1",
+  "keywords": [],
+  "dependencies": {
+    "component/query": "*"
+  },
+  "development": {},
+  "license": "MIT",
+  "main": "index.js",
+  "scripts": [
+    "index.js"
+  ],
+  "repository": "yuehu/google-analytics",
+  "resolved": "a928374c59917f469152a7616b2d3dc290e937dc"
+}

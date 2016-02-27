@@ -1,0 +1,32 @@
+{
+  "name": "lepture",
+  "repo": "lepture/lepture",
+  "description": "Just lepture",
+  "version": "0.0.1",
+  "keywords": [],
+  "dependencies": {
+    "component/query": "*",
+    "yuehu/google-analytics": "*",
+    "yuehu/turbolinks": "*",
+    "lepture/social": "*",
+    "lepture/yue.css": "*"
+  },
+  "development": {},
+  "license": "MIT",
+  "main": "index.js",
+  "scripts": [
+    "index.js"
+  ],
+  "styles": [
+    "ui.css",
+    "site.css",
+    "pygments.css",
+    "book.css"
+  ],
+  "fonts": [
+    "fonts/social.woff",
+    "fonts/social.eot",
+    "fonts/social.svg",
+    "fonts/social.ttf"
+  ]
+}

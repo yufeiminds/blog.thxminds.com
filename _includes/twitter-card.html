@@ -1,0 +1,27 @@
+<meta property="og:type" content="article">
+<meta property="og:title" content="{{ page.title }}">
+<meta property="og:url" content="{{ site.baseurl }}{{ page.url }}">
+{% if page.description %}
+  <meta name="description" content="{{ page.description }}">
+  <meta property="og:description" content="{{ page.description }}">
+{% endif %}
+{% if page.cover %}
+  <meta property="og:image" content="{{ page.cover }}">
+{% elif page.image %}
+  <meta property="og:image" content="{{ page.image }}">
+{% endif %}
+{% if page.cover %}
+  <meta name="twitter:card" content="summary_large_image">
+{% else %}
+  <meta name="twitter:card" content="summary">
+{% endif %}
+<meta name="twitter:site" content="@yufeiminds">
+<meta name="twitter:creator" content="@yufeiminds">
+<meta name="twitter:domain" content="blog.thxminds.com">
+<meta property="og:site_name" content="{{ site.name }}">
+{% if '/zh/' in page.url %}
+  <meta property="og:locale" content="zh_TW">
+{% else %}
+  <meta property="og:locale" content="en_US">
+{% endif %}
+<link rel="canonical" href="{{ site.baseurl }}{{ page.url }}">
