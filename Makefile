@@ -28,4 +28,4 @@ serve:
 	@writeup serve
 
 publish:
-	@ghp-import _site -p -n -b master
+	@ghp-import _site -p -n -b gh-pages
